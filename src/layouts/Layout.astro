@@ -1,7 +1,5 @@
 ---
 import '../../src/styles/globals.css';
-import '@fontsource-variable/inter/wght.css';
-import interWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
@@ -16,19 +14,69 @@ const { title } = Astro.props;
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>{title}</title>
+        <title>{title} | MÖP ARCHIVE</title>
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     </head>
-    <body class="antialiased text-white bg-complementary">
-        <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
-            <div class="flex flex-col w-full max-w-5xl mx-auto grow">
+    <body class="antialiased text-white selection:bg-white selection:text-black">
+        <div class="flex flex-col min-h-screen px-6 sm:px-12 bg-[#000000] relative overflow-hidden">
+            
+            <div class="fixed inset-0 pointer-events-none opacity-[0.03] z-50 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+
+            <div class="flex flex-col w-full max-w-5xl mx-auto grow relative z-10">
                 <Header />
-                <main class="grow"><slot /></main>
+                <main class="grow py-12">
+                    <slot />
+                </main>
                 <Footer />
             </div>
         </div>
+
+        <style is:global>
+            :root {
+                --mop-black: #000000;
+                --mop-white: #ffffff;
+            }
+
+            html {
+                background-color: var(--mop-black);
+                font-family: 'Space Mono', monospace; 
+                cursor: crosshair; 
+                scroll-behavior: smooth;
+            }
+
+            
+            h1, h2, h3 {
+                text-transform: uppercase;
+                letter-spacing: -0.02em;
+                font-weight: 700;
+            }
+
+            /* Links con estilo subversivo */
+            a {
+                transition: all 0.3s ease-in-out;
+            }
+
+            a:hover {
+                font-style: italic;
+                opacity: 0.6;
+            }
+
+            /* Scrollbar minimalista */
+            ::-webkit-scrollbar {
+                width: 4px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #000;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #333;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #fff;
+            }
+        </style>
     </body>
 </html>

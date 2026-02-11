@@ -1,19 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout title="Home">
+  <section class="mt-24 mb-32">
+    <h1 class="text-5xl md:text-8xl font-bold leading-none tracking-tighter mb-8">
+      PAULA MÉNDEZ ORTEGA<br/>
+      <span class="text-white/20 italic">モップ アーカイブ</span>
+    </h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
+      <div class="text-sm leading-relaxed max-w-sm">
+        <p class="mb-4">
+          [KR] 디지털 아키텍트와 창의적 코딩을 통해 시각적 경험을 구축합니다.
+        </p>
+        <p class="text-white/50">
+          Digital architect focused on building immersive visual experiences through creative coding and structural design.
+        </p>
+      </div>
+      
+      <div class="flex flex-col justify-end items-end italic text-xs text-white/30">
+        <p>BASED IN MEXICO</p>
+        <p>AVAILABLE GLOBALLY</p>
+        <p>WORKING ON: KODŌ PROJECT, K-TREND ANALYZER</p>
+      </div>
+    </div>
+  </section>
 </Layout>

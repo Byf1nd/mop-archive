@@ -6,9 +6,9 @@ const navItems = [
 ];
 
 const languages = [
-    { code: 'ES', label: 'ES'},
-    { code: 'EN', label: 'EN'},
-    { code: 'KR', label: 'KR'}
+    { code: 'ES', label: 'ES', href: '/' },
+    { code: 'EN', label: 'EN', href: '/en' },
+    { code: 'KR', label: 'KR', href: '/kr' }
 ]
 ---
 
@@ -27,11 +27,14 @@ const languages = [
       ))}
     </div>
     
-    <div class="flex gap-3 text-white/30">
+<div class="flex gap-3 text-white/30">
       {languages.map(lang => (
-        <button class="hover:text-white transition-colors cursor-crosshair">
+        <a 
+          href={lang.href} 
+          class="hover:text-white transition-colors cursor-crosshair text-[10px]"
+        >
           {lang.label}
-        </button>
+        </a>
       ))}
     </div>
   </nav>

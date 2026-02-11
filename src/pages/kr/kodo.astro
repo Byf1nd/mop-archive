@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="KODŌ 아카이브 | 하이엔드 큐레이션">
+  <div class="py-12">
+    <div class="flex justify-between items-center mb-16 text-[10px] tracking-[0.2em]">
+      <a href="/kr" class="text-white/40 hover:text-white">← 인덱스로 돌아가기</a>
+      <span class="text-white/20">케이스 스터디 / 이커머스 프로토타입</span>
+    </div>
+
+    <header class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
+      <div>
+        <h1 class="text-7xl font-bold tracking-tighter mb-6">KODŌ<br/>ARCHIVE</h1>
+        <div class="flex gap-4">
+          <span class="px-3 py-1 border border-white/20 text-[9px]">하이엔드 아카이브</span>
+          <span class="px-3 py-1 border border-white/20 text-[9px]">B2C 모델</span>
+        </div>
+      </div>
+      <div class="flex flex-col justify-end">
+        <p class="text-xl leading-tight text-white/60">
+          투자 가치가 있는 피스와 아카이브 패션 큐레이션. 희소성과 문화적 검증을 기반으로 한 비즈니스 모델.
+        </p>
+      </div>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/10 pt-12">
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-[10px] text-white/30 tracking-widest mb-4">타겟 세그먼트</h2>
+          <p class="text-sm">NSE A/B. 하이 프로필 개인. 하이프 민감도가 높은 틈새 시장.</p>
+        </div>
+        <div>
+          <h2 class="text-[10px] text-white/30 tracking-widest mb-4">수익 모델</h2>
+          <p class="text-sm">독점적 마진을 포함한 직접 판매 및 글로벌 소싱 물류.</p>
+        </div>
+      </div>
+
+      <div class="md:col-span-2 space-y-12">
+        <div class="bg-white/5 p-8 border border-white/5">
+          <h2 class="text-[10px] text-white/30 tracking-widest mb-6">구매자 페르소나: 루카 (27)</h2>
+          <div class="grid grid-cols-2 gap-8 text-xs leading-relaxed">
+            <p><span class="text-white/50">위치:</span> 메리다 / CDMX / 글로벌 허브</p>
+            <p><span class="text-white/50">동기:</span> 완전한 독점성과 급진적 정체성.</p>
+            <p class="col-span-2"><span class="text-white/50">행동:</span> 재판매 가치가 높은 패션 자산에 투자.</p>
+          </div>
+        </div>
+
+        <div class="pt-12 border-t border-white/5">
+          <h2 class="text-[10px] text-white/30 tracking-widest mb-8 text-center underline">아이템 컨디션 프로토콜</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="border border-white/10 p-4 text-center">
+              <p class="text-[9px] text-white/40 mb-2">원단</p>
+              <p class="text-xs">S 등급</p>
+            </div>
+            <div class="border border-white/10 p-4 text-center">
+              <p class="text-[9px] text-white/40 mb-2">하드웨어</p>
+              <p class="text-xs">A 등급</p>
+            </div>
+            <div class="border border-white/10 p-4 text-center">
+              <p class="text-[9px] text-white/40 mb-2">스티칭</p>
+              <p class="text-xs">변경 없음</p>
+            </div>
+            <div class="border border-white/10 p-4 text-center">
+              <p class="text-[9px] text-white/40 mb-2">정품 인증</p>
+              <p class="text-xs">인증됨</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+            <div class="aspect-square bg-white/5 flex items-center justify-center text-[10px] text-white/10 italic">
+                [ AUTHENTICATION_FLOW ]
+            </div>
+            <div class="aspect-square bg-white/5 flex items-center justify-center text-[10px] text-white/10 italic">
+                [ LOGISTICS_PREVIEW ]
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-32 pt-12 border-t border-white/10 flex justify-between items-center">
+        <p class="text-[10px] text-white/40 italic">2단계: 이커머스 전략 활성화</p>
+        <a href="https://kodoarchive.myshopify.com/" target="_blank" class="bg-white text-black px-8 py-3 text-xs font-bold hover:bg-white/80 transition-all">
+            SHOPIFY 프로토타입 보기 ↗
+        </a>
+    </footer>
+  </div>
+</Layout>

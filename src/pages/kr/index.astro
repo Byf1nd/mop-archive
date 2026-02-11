@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="홈 | KR">
+  <section class="mt-24 mb-32">
+    <h1 class="text-5xl md:text-8xl font-bold leading-none tracking-tighter mb-8">
+      PAULA MENDEZ ORTEGA<br/>
+      <span class="text-white/20 italic">뫂 아카이브</span>
+    </h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
+      <div class="text-sm leading-relaxed max-w-sm">
+        <p class="mb-4 text-base font-light">
+          창의적인 코딩과 구조적 디자인을 통해 몰입형 시각 경험을 구축하는 디지털 아키텍트입니다.
+        </p>
+        <p class="text-white/30 text-[10px] tracking-widest uppercase">
+          아카이브 패션과 디지털 환경 사이의 가교 역할.
+        </p>
+      </div>
+      
+      <div class="flex flex-col justify-end items-end italic text-[10px] text-white/30">
+        <p>멕시코 기반</p>
+        <p>전 세계 업무 가능</p>
+        <p>진행 중인 프로젝트: KODŌ, K-TREND ANALYZER</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-white/10 pt-12">
+    <p class="text-[10px] text-white/40 mb-12 tracking-[0.3em]">선택된 프로젝트 / 2026</p>
+  
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+      <a href="/kr/kodo" class="group flex flex-col gap-4">
+        <div class="aspect-[16/9] bg-white/5 overflow-hidden relative border border-white/5 group-hover:border-white/20 transition-all">
+          <div class="absolute inset-0 flex items-center justify-center text-[10px] text-white/20 group-hover:text-white/60 transition-colors uppercase">
+            [ KODŌ ARCHIVE_PROTOTYPE ]
+          </div>
+        </div>
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-sm font-bold">KODŌ 아카이브</h3>
+          <span class="text-[10px] text-white/30 italic uppercase">이커머스 / 하이엔드</span>
+        </div>
+      </a>
+
+      <a href="/k-trend" class="group flex flex-col gap-4">
+        <div class="aspect-[16/9] bg-white/5 overflow-hidden relative border border-white/5 group-hover:border-white/20 transition-all">
+          <div class="absolute inset-0 flex items-center justify-center text-[10px] text-white/20 group-hover:text-white/60 uppercase">
+            [ K-TREND ANALYZER_DASHBOARD ]
+          </div>
+        </div>
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-sm font-bold">K-트렌드 분석기</h3>
+          <span class="text-[10px] text-white/30 italic uppercase">데이터 시각화 / 한국 시장</span>
+        </div>
+      </a>
+    </div>
+  </section>
+</Layout>

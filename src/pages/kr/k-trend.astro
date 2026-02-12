@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="K-트렌드 분석기 | 데이터 인텔리전스">
+  <div class="py-12 space-y-24">
+    <div class="flex justify-between items-center text-[10px] tracking-[0.2em]">
+      <a href="/kr" class="text-white/40 hover:text-white transition-colors">← 인덱스로 돌아가기</a>
+      <span class="text-green-500/50 italic tracking-widest">● 클라우드 시스템 활성화됨</span>
+    </div>
+
+    <header class="max-w-3xl">
+      <h1 class="text-6xl font-bold tracking-tighter mb-6 text-green-500 uppercase">K-Trend<br/>Analyzer</h1>
+      <p class="text-xl text-white/60 leading-tight">
+        고급 웹 스크래핑과 클라우드 네이티브 스토리지를 사용하여 한국 패션 시장의 변동성을 추적하도록 설계된 문화 지능 ETL 파이프라인입니다.
+      </p>
+    </header>
+
+    <section class="bg-[#050505] border border-white/10 p-6 font-mono text-xs overflow-hidden relative shadow-2xl">
+      <div class="flex gap-2 mb-4 border-b border-white/5 pb-2">
+        <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
+        <div class="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+        <div class="w-2 h-2 rounded-full bg-green-500/50"></div>
+        <span class="text-[9px] text-white/20 ml-4 uppercase">인스턴스: AZURE_POSTGRES_서울</span>
+      </div>
+      
+      <div class="space-y-1">
+        <p class="text-white/40">[22:14:01] <span class="text-green-500">INIT</span> 파이프라인 시작...</p>
+        <p class="text-white/40">[22:14:03] <span class="text-blue-500">EXTRACTING</span> 네이버 블로그 데이터 추출 중: "서울패션"...</p>
+        <p class="text-green-500/80">>> 성공: 1,176,151개의 레코드 발견</p>
+        <p class="text-white/40">[22:14:05] <span class="text-yellow-500">SYNCING</span> AZURE 데이터베이스와 동기화 중...</p>
+        <p class="text-white/40">[22:14:06] <span class="text-green-500">STATUS</span>: 데이터 준비 완료</p>
+      </div>
+      
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/5 to-transparent h-20 w-full animate-scan pointer-events-none"></div>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-12">
+      <div>
+        <h2 class="text-[10px] text-white/30 tracking-widest uppercase mb-4">인프라</h2>
+        <ul class="text-sm space-y-2 italic">
+          <li>Azure PostgreSQL</li>
+          <li>Playwright Síncrono</li>
+          <li>BeautifulSoup4 / Python</li>
+        </ul>
+      </div>
+      <div class="md:col-span-2">
+        <h2 class="text-[10px] text-white/30 tracking-widest uppercase mb-4">방법론</h2>
+        <p class="text-sm text-white/70 leading-relaxed">
+          네이버 에코시스템 분석을 통한 문화적 메타데이터 추출. 이 시스템은 한글 캐릭터를 표준화하고 아카이브 브랜드에 대한 관심 정점을 감지하여, 서울의 실시간 트렌드를 기반으로 데이터 중심의 시장 검증을 가능하게 합니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @keyframes scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(400%); } }
+  .animate-scan { animation: scan 3s linear infinite; }
+</style>

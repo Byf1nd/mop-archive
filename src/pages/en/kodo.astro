@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="KODŌ ARCHIVE | High-End Curation">
   <div class="py-12">
     <div class="flex justify-between items-center mb-16 text-[10px] tracking-[0.2em]">
-      <a href="/en" class="text-white/40 hover:text-white">← BACK TO INDEX</a>
+      <a href="/en" class="text-white/40 hover:text-white transition-colors">← BACK TO INDEX</a>
       <span class="text-white/20">CASE STUDY / E-COMMERCE PROTOTYPE</span>
     </div>
 
@@ -27,61 +27,94 @@ import Layout from '../../layouts/Layout.astro';
     <section class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/10 pt-12">
       <div class="space-y-8">
         <div>
-          <h2 class="text-[10px] text-white/30 tracking-widest mb-4">TARGET SEGMENT</h2>
-          <p class="text-sm">NSE A/B. High-Profile Individuals. Transversal niche with Hype-sensitivity.</p>
+          <h2 class="text-[10px] text-white/30 tracking-widest mb-4 uppercase">Target Segment</h2>
+          <p class="text-sm">NSE A/B. High-Profile Individuals. Transversal niche with "Hype-sensitivity".</p>
         </div>
         <div>
-          <h2 class="text-[10px] text-white/30 tracking-widest mb-4">REVENUE MODEL</h2>
+          <h2 class="text-[10px] text-white/30 tracking-widest mb-4 uppercase">Revenue Model</h2>
           <p class="text-sm">Direct sales with exclusivity margin and global sourcing logistics.</p>
         </div>
       </div>
 
       <div class="md:col-span-2 space-y-12">
         <div class="bg-white/5 p-8 border border-white/5">
-          <h2 class="text-[10px] text-white/30 tracking-widest mb-6">BUYER PERSONA: LUCA (27)</h2>
-          <div class="grid grid-cols-2 gap-8 text-xs leading-relaxed">
-            <p><span class="text-white/50">LOCATION:</span> Merida / CDMX / Global Hubs</p>
-            <p><span class="text-white/50">MOTIVATION:</span> Total exclusivity and radical identity.</p>
-            <p class="col-span-2"><span class="text-white/50">BEHAVIOR:</span> Investing in fashion assets with high resale potential.</p>
+          <h2 class="text-[10px] text-white/30 tracking-widest mb-6 uppercase">Buyer Persona: Luca (27)</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs leading-relaxed">
+            <p><span class="text-white/50 uppercase">Location:</span> Merida / CDMX / Global Hubs</p>
+            <p><span class="text-white/50 uppercase">Motivation:</span> Absolute exclusivity and radical identity.</p>
+            <p class="sm:col-span-2"><span class="text-white/50 uppercase">Behavior:</span> Investing in fashion assets with high resale potential.</p>
           </div>
         </div>
 
         <div class="pt-12 border-t border-white/5">
-          <h2 class="text-[10px] text-white/30 tracking-widest mb-8 text-center underline">ITEM CONDITION PROTOCOL</h2>
+          <h2 class="text-[10px] text-white/30 tracking-widest mb-8 text-center underline uppercase">Item Condition Protocol</h2>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="border border-white/10 p-4 text-center">
-              <p class="text-[9px] text-white/40 mb-2">FABRIC</p>
-              <p class="text-xs">S GRADE</p>
+              <p class="text-[9px] text-white/40 mb-2 uppercase">Fabric</p>
+              <p class="text-xs uppercase font-bold">Grade S</p>
             </div>
             <div class="border border-white/10 p-4 text-center">
-              <p class="text-[9px] text-white/40 mb-2">HARDWARE</p>
-              <p class="text-xs">A GRADE</p>
+              <p class="text-[9px] text-white/40 mb-2 uppercase">Hardware</p>
+              <p class="text-xs uppercase font-bold">Grade A</p>
             </div>
             <div class="border border-white/10 p-4 text-center">
-              <p class="text-[9px] text-white/40 mb-2">STITCHING</p>
-              <p class="text-xs">UNALTERED</p>
+              <p class="text-[9px] text-white/40 mb-2 uppercase">Stitching</p>
+              <p class="text-xs uppercase font-bold">Unaltered</p>
             </div>
             <div class="border border-white/10 p-4 text-center">
-              <p class="text-[9px] text-white/40 mb-2">AUTHENTICITY</p>
-              <p class="text-xs">VERIFIED</p>
+              <p class="text-[9px] text-white/40 mb-2 uppercase">Authenticity</p>
+              <p class="text-xs uppercase font-bold">Verified</p>
             </div>
           </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4">
-            <div class="aspect-square bg-white/5 flex items-center justify-center text-[10px] text-white/10 italic">
-                [ AUTHENTICATION_FLOW ]
-            </div>
-            <div class="aspect-square bg-white/5 flex items-center justify-center text-[10px] text-white/10 italic">
-                [ LOGISTICS_PREVIEW ]
-            </div>
         </div>
       </div>
     </section>
 
-    <footer class="mt-32 pt-12 border-t border-white/10 flex justify-between items-center">
-        <p class="text-[10px] text-white/40 italic">PHASE 2: E-COMMERCE STRATEGY ACTIVE</p>
-        <a href="https://kodoarchive.myshopify.com/" target="_blank" class="bg-white text-black px-8 py-3 text-xs font-bold hover:bg-white/80 transition-all">
+    <section class="mt-32 space-y-32">
+      <div class="space-y-4 max-w-4xl mx-auto">
+        <div class="bg-white/[0.02] border border-white/10 group overflow-hidden shadow-2xl">
+          <img src="/images/kodo-home.png" alt="Desktop Interface" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700 antialiased" />
+        </div>
+        <p class="text-[9px] text-white/20 italic tracking-[0.2em] text-center uppercase">01 // UI Architecture: "Luxury is Dead" Concept</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto items-end">
+        <div class="space-y-4">
+          <div class="bg-white/[0.02] border border-white/10 shadow-xl">
+            <img src="/images/kodo-apparel.jpg" alt="Curated Selection" class="w-full h-auto opacity-90 hover:opacity-100 transition-opacity" />
+          </div>
+          <p class="text-[9px] text-white/20 italic tracking-[0.2em] uppercase text-right">02 // Curation: Archival Garment (Heliot Emil)</p>
+        </div>
+        <div class="space-y-4 md:pb-24">
+          <div class="bg-white/[0.02] border border-white/10 shadow-xl">
+            <img src="/images/kodo-items.jpg" alt="Item Inventory" class="w-full h-auto opacity-90 hover:opacity-100 transition-opacity" />
+          </div>
+          <p class="text-[9px] text-white/20 italic tracking-[0.2em] uppercase">03 // Inventory: Investment Assets Grid</p>
+        </div>
+      </div>
+
+      <div class="space-y-16 max-w-5xl mx-auto border-t border-white/5 pt-16">
+        <h2 class="text-[10px] text-white/30 tracking-[0.3em] uppercase text-center">Mobile Ecosystem & Conversion Flow</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+          <div class="space-y-4">
+              <img src="/images/kodo-cart.jpg" alt="Cart UX" class="w-full h-auto border border-white/10 shadow-2xl" />
+              <p class="text-[8px] text-white/20 italic uppercase text-center">04 // Transactional UX: Checkout Logic</p>
+          </div>
+          <div class="space-y-4 md:mt-24">
+              <img src="/images/kodo-registration.jpg" alt="Registration" class="w-full h-auto border border-white/10 shadow-2xl" />
+              <p class="text-[8px] text-white/20 italic uppercase text-center">05 // Onboarding: Community Access</p>
+          </div>
+          <div class="space-y-4">
+              <img src="/images/kodo-form.jpg" alt="Concierge Form" class="w-full h-auto border border-white/10 shadow-2xl" />
+              <p class="text-[8px] text-white/20 italic uppercase text-center">06 // Concierge Service: Direct Channel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-32 pt-12 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-6">
+        <p class="text-[10px] text-white/40 italic uppercase tracking-widest">Phase 2: Strategy & Curation Active</p>
+        <a href="https://kodoarchive.myshopify.com/" target="_blank" class="bg-white text-black px-8 py-3 text-xs font-bold hover:invert transition-all">
             VIEW SHOPIFY PROTOTYPE ↗
         </a>
     </footer>

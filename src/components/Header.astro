@@ -1,8 +1,13 @@
 ---
+const { lang = 'ES' } = Astro.props;
+
+// Definimos las rutas base según el idioma
+const base = lang === 'ES' ? '' : `/${lang.toLowerCase()}`;
+
 const navItems = [
-  { name: 'INDEX', href: '/' },
-  { name: 'ARCHIVE', href: '/archive' },
-  { name: 'KODŌ', href: '/kodo' },
+  { name: 'INDEX', href: `${base}/` },
+  { name: 'K-TREND', href: `${base}/k-trend` },
+  { name: 'KODŌ', href: `${base}/kodo` },
 ];
 
 const languages = [
@@ -14,7 +19,7 @@ const languages = [
 
 <header class="py-8 flex justify-between items-baseline border-b border-white/10">
   <div class="flex flex-col">
-    <a href="/" class="text-xl font-bold tracking-tighter hover:opacity-100">
+    <a href={base + "/"} class="text-xl font-bold tracking-tighter hover:opacity-100">
       MÖP ARCHIVE <span class="text-[10px] font-normal align-top ml-1">©2026</span>
     </a>
     <p class="text-[10px] text-white/40 tracking-[0.2em]">DIGITAL ARCHITECT / CREATIVE TECH</p>
@@ -23,17 +28,17 @@ const languages = [
   <nav class="flex gap-8 text-[11px] items-center">
     <div class="hidden md:flex gap-6 mr-12">
       {navItems.map(item => (
-        <a href={item.href} class="hover:italic">{item.name}</a>
+        <a href={item.href} class="hover:italic transition-all">{item.name}</a>
       ))}
     </div>
     
-<div class="flex gap-3 text-white/30">
-      {languages.map(lang => (
+    <div class="flex gap-3 text-white/30">
+      {languages.map(l => (
         <a 
-          href={lang.href} 
-          class="hover:text-white transition-colors cursor-crosshair text-[10px]"
+          href={l.href} 
+          class={`hover:text-white transition-colors cursor-crosshair text-[10px] ${lang === l.code ? 'text-white underline' : ''}`}
         >
-          {lang.label}
+          {l.label}
         </a>
       ))}
     </div>

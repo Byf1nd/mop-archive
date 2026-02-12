@@ -1,59 +1,140 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const techStack = [
+  'Python', 'Azure', 'C#', 'SQL', 
+  'NLP', 'Pandas', 'Playwright', 
+  'Astro', 'Figma', 'Git'
+];
 ---
 
-<Layout title="Home | EN">
+<Layout title="Home">
   <section class="mt-24 mb-32">
-    <h1 class="text-5xl md:text-8xl font-bold leading-none tracking-tighter mb-8">
-      PAULA MENDEZ ORTEGA<br/>
-      <span class="text-white/20 italic">MÖP ARCHIVE</span>
+    <h1 class="text-5xl md:text-8xl font-bold leading-none tracking-tighter mb-8 group">
+      PAULA MÉNDEZ ORTEGA<br/>
+      <span class="text-white/20 italic text-4xl md:text-6xl group-hover:text-white/40 transition-all">MÖP ARCHIVE</span>
     </h1>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
       <div class="text-sm leading-relaxed max-w-sm">
         <p class="mb-4">
-          Digital architect focused on building immersive visual experiences through creative coding and structural design.
+          Digital Architect and Software Engineer specializing in building immersive infrastructures through Artificial Intelligence and Data Science.
         </p>
-        <p class="text-white/30 text-[10px] tracking-widest uppercase">
-          Bridging the gap between archival fashion and digital environments.
+        <p class="text-white/30 text-[10px] tracking-widest uppercase italic border-l border-white/20 pl-4">
+          Samsung Innovation Campus AI/Data Science Participant.
         </p>
       </div>
       
       <div class="flex flex-col justify-end items-end italic text-xs text-white/30 space-y-1">
-        <p>BASED IN MEXICO</p>
-        <p>AVAILABLE GLOBALLY</p>
-        <p>WORKING ON: KODŌ PROJECT, K-TREND ANALYZER</p>
+        <p class="hover:text-white transition-colors uppercase">Based in Mexico</p>
+        <p class="hover:text-white transition-colors uppercase text-right leading-tight font-bold">Dual Degree: SW Engineering (UADY) <br/>& Digital Transformation (EBC)</p>
       </div>
     </div>
   </section>
 
   <section class="border-t border-white/10 pt-12">
-    <p class="text-[10px] text-white/40 mb-12 tracking-[0.3em]">SELECTED PROJECTS / 2026</p>
+     <p class="text-[10px] text-white/40 mb-12 tracking-[0.3em] uppercase font-mono">Selected_Projects // v.2.0</p>
   
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
       <a href="/en/kodo" class="group flex flex-col gap-4">
-        <div class="aspect-[16/9] bg-white/5 overflow-hidden relative border border-white/5 group-hover:border-white/20 transition-all">
-          <div class="absolute inset-0 flex items-center justify-center text-[10px] text-white/20 group-hover:text-white/60 transition-colors uppercase">
-            [ KODŌ ARCHIVE_PROTOTYPE ]
-          </div>
+        <div class="aspect-[16/9] bg-white/5 overflow-hidden relative border border-white/5 group-hover:border-white/20 transition-all duration-500">
+          <img
+            src="/images/kodo-home.png"
+            alt="KODŌ Archive Prototype"
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+          />
         </div>
         <div class="flex justify-between items-baseline">
-          <h3 class="text-sm font-bold">KODŌ ARCHIVE</h3>
-          <span class="text-[10px] text-white/30 italic uppercase">E-commerce / High-end</span>
+          <h3 class="text-sm font-bold tracking-tight uppercase group-hover:italic transition-all">KODŌ Archive</h3>
+          <span class="text-[10px] text-white/30 italic uppercase">E-commerce / Luxury Architecture</span>
         </div>
       </a>
 
-      <a href="/k-trend" class="group flex flex-col gap-4">
-        <div class="aspect-[16/9] bg-white/5 overflow-hidden relative border border-white/5 group-hover:border-white/20 transition-all">
-          <div class="absolute inset-0 flex items-center justify-center text-[10px] text-white/20 group-hover:text-white/60 uppercase">
-            [ K-TREND ANALYZER_DASHBOARD ]
+      <a href="/en/k-trend" class="group flex flex-col gap-4">
+        <div class="aspect-[16/9] bg-[#050505] overflow-hidden relative border border-white/5 group-hover:border-white/20 transition-all duration-500 flex flex-col p-6 font-mono">
+          <div class="flex gap-1.5 mb-4 opacity-30 group-hover:opacity-100 transition-opacity">
+            <div class="w-1.5 h-1.5 rounded-full bg-red-500/50 shadow-[0_0_5px_rgba(239,68,68,0.5)]"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-yellow-500/50 shadow-[0_0_5px_rgba(234,179,8,0.5)]"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-green-500/50 shadow-[0_0_5px_rgba(34,197,94,0.5)]"></div>
           </div>
+          
+          <div class="text-[9px] space-y-2 uppercase tracking-wider">
+            <p class="text-green-500/60 group-hover:text-green-500 transition-colors">>> STATUS: ANALYZING_SEOUL_MARKET</p>
+            <p class="text-white/20 group-hover:text-white/60 transition-colors">[SCRAPING_NAVER_REAL_TIME]</p>
+            <p class="text-white/20 group-hover:text-white/60 transition-colors">[AZURE_CLOUD_DATABASE_SYNC]</p>
+            <p class="text-blue-500/40 group-hover:animate-pulse">>> NLP_SENTIMENT_ANALYSIS_ACTIVE</p>
+            <p class="text-white/10 group-hover:text-white/40 italic mt-4">// engine: python_playwright</p>
+          </div>
+
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/5 to-transparent h-1/3 w-full animate-scan pointer-events-none"></div>
         </div>
+        
         <div class="flex justify-between items-baseline">
-          <h3 class="text-sm font-bold">K-TREND ANALYZER</h3>
-          <span class="text-[10px] text-white/30 italic uppercase">Data Viz / Korean Market</span>
+          <h3 class="text-sm font-bold tracking-tight uppercase group-hover:italic transition-all">K-Trend Analyzer</h3>
+          <span class="text-[10px] text-white/30 italic uppercase">Data Science / AI / Seoul</span>
         </div>
       </a>
     </div>
   </section>
+
+  <section class="mt-32 pt-12 border-t border-white/10 group mb-20">
+    <h2 class="text-[10px] text-white/20 mb-12 tracking-[0.3em] group-hover:text-white/60 transition-colors uppercase italic font-mono">
+      User_Identity: technical_file_v2.0
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start text-white">
+      <div class="space-y-8 font-mono text-xs leading-relaxed">
+        <div class="border-l-2 border-white/5 pl-4 hover:border-blue-500/50 transition-colors duration-500">
+          <p class="text-white/30 uppercase mb-1">[ Academic_Path ]</p>
+          <p class="font-bold uppercase leading-tight">Software Engineering (UADY)<br/>Programming & Digital Transf. (EBC)</p>
+        </div>
+        
+        <div class="border-l-2 border-white/5 pl-4 hover:border-green-500/50 transition-colors duration-500">
+          <p class="text-white/30 uppercase mb-1">[ Technical_Milestones ]</p>
+          <p>• Samsung Innovation Campus (AI Track)</p>
+          <p>• Data Science Cert. (Microsoft/BEDU)</p>
+          <p>• IA with C# & Azure (Código Facilito)</p>
+        </div>
+
+        <div class="border-l-2 border-white/5 pl-4 hover:border-yellow-500/50 transition-colors duration-500">
+          <p class="text-white/30 uppercase mb-1">[ System_Mission ]</p>
+          <p>Optimizing the intersection between Big Data and editorial UX. Specialized in Asian market validation through intelligent automation.</p>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <p class="text-[9px] text-white/20 tracking-widest uppercase text-right italic font-mono">Hover_to_deploy_stack</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 opacity-60 group-hover:opacity-100 transition-opacity duration-1000">
+          {techStack.map((tech) => (
+            <div class="border border-white/10 p-3 text-center hover:bg-white hover:text-black transition-all cursor-crosshair group/tech">
+               <p class="text-[8px] font-bold tracking-tighter uppercase">{tech}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  @keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(300%); }
+  }
+  .animate-scan {
+    animation: scan 4s linear infinite;
+  }
+
+  section {
+    animation: fadeInUp 1.2s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h1:hover {
+    text-shadow: 1px 0 #00ff0040, -1px 0 #ff000040;
+  }
+</style>

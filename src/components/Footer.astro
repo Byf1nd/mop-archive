@@ -2,33 +2,38 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="mt-32 pb-12 border-t border-white/10 pt-12">
+<footer class="mt-40 pb-12 border-t border-white/10 pt-12">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
     
     <div class="flex flex-col gap-4">
-      <p class="text-[10px] text-white/30 tracking-widest uppercase">Contact / Business</p>
-      <a href="mailto:paula@moparchive.com" class="text-sm hover:italic transition-all">
+      <p class="text-[10px] text-white/30 tracking-widest uppercase font-mono">[ 01_COMMUNICATION ]</p>
+      <a href="mailto:paula@moparchive.com" class="text-sm hover:text-yellow-500 hover:italic transition-all duration-300">
         paula@moparchive.com
       </a>
-      <p class="text-[10px] text-white/20 italic">Disponible para proyectos globales.</p>
+      <p class="text-[10px] text-white/20 italic tracking-tight">Available for global projects
     </div>
 
     <div class="flex flex-col gap-4">
-      <p class="text-[10px] text-white/30 tracking-widest uppercase">Digital Presence</p>
-      <div class="flex gap-6 text-[11px]">
-        <a href="https://www.instagram.com/byf1nd/?hl=es" target="_blank" class="hover:opacity-50 transition-opacity">INSTAGRAM</a>
-        <a href="https://github.com/Byf1nd" target="_blank" class="hover:opacity-50 transition-opacity">GITHUB</a>
-        <a href="https://www.linkedin.com/in/paula-mendez-ortega/" target="_blank" class="hover:opacity-50 transition-opacity">LINKEDIN</a>
+      <p class="text-[10px] text-white/30 tracking-widest uppercase font-mono">[ 02_NETWORK_NODES ]</p>
+      <div class="flex gap-6 text-[10px] font-mono">
+        <a href="https://www.instagram.com/byf1nd/?hl=es" target="_blank" class="text-white/40 hover:text-pink-500 transition-colors duration-300">INSTAGRAM</a>
+        <a href="https://github.com/Byf1nd" target="_blank" class="text-white/40 hover:text-green-500 transition-colors duration-300">GITHUB</a>
+        <a href="https://www.linkedin.com/in/paula-mendez-ortega/" target="_blank" class="text-white/40 hover:text-blue-500 transition-colors duration-300">LINKEDIN</a>
       </div>
     </div>
 
     <div class="flex flex-col items-end justify-between">
-      <p class="text-[10px] text-white/20 tracking-tighter">
-        MÖP ARCHIVE <span class="mx-2">—</span> {currentYear} ©
+      <p class="text-[10px] text-white/20 tracking-tighter font-mono uppercase">
+        MÖP ARCHIVE <span class="mx-2 text-white/5">—</span> {currentYear} ©
       </p>
-      <p class="text-[9px] text-white/10 uppercase tracking-[0.3em]">
-        Built with Astro & Precision
-      </p>
+      <div class="text-right">
+        <p class="text-[9px] text-white/10 uppercase tracking-[0.3em] font-mono mb-1">
+          Built with Astro & Precision
+        </p>
+        <p class="text-[8px] text-green-500/30 font-mono animate-pulse">
+          SYSTEM_STATUS: STABLE
+        </p>
+      </div>
     </div>
 
   </div>

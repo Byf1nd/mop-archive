@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="K-TREND ANALYZER | Data Intelligence">
+  <div class="py-12 space-y-24">
+    <div class="flex justify-between items-center text-[10px] tracking-[0.2em]">
+      <a href="/en" class="text-white/40 hover:text-white transition-colors">← BACK TO INDEX</a>
+      <span class="text-green-500/50 italic tracking-widest">● CLOUD SYSTEM ACTIVE</span>
+    </div>
+
+    <header class="max-w-3xl">
+      <h1 class="text-6xl font-bold tracking-tighter mb-6 text-green-500">K-TREND<br/>ANALYZER</h1>
+      <p class="text-xl text-white/60 leading-tight">
+        A cultural intelligence ETL pipeline designed to track fashion volatility within the South Korean market using advanced web scraping and cloud-native storage.
+      </p>
+    </header>
+
+    <section class="bg-[#050505] border border-white/10 p-6 font-mono text-xs overflow-hidden relative shadow-2xl">
+      <div class="flex gap-2 mb-4 border-b border-white/5 pb-2">
+        <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
+        <div class="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+        <div class="w-2 h-2 rounded-full bg-green-500/50"></div>
+        <span class="text-[9px] text-white/20 ml-4 uppercase">Instance: psql-ktrend-azure</span>
+      </div>
+      
+      <div class="space-y-1">
+        <p class="text-white/40">[22:14:01] <span class="text-green-500">INIT</span> PIPELINE...</p>
+        <p class="text-white/40">[22:14:03] <span class="text-blue-500">EXTRACTING</span> NAVER_BLOG DATA: "서울패션"...</p>
+        <p class="text-green-500/80">>> SUCCESS: 1,176,151 TOTAL RECORDS FOUND</p>
+        <p class="text-white/40">[22:14:05] <span class="text-yellow-500">SYNCING</span> WITH AZURE POSTGRESQL...</p>
+        <p class="text-white/40">[22:14:06] <span class="text-green-500">STATUS</span>: DATABASE CLEAN AND READY</p>
+      </div>
+      
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/5 to-transparent h-20 w-full animate-scan pointer-events-none"></div>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-12">
+      <div>
+        <h2 class="text-[10px] text-white/30 tracking-widest uppercase mb-4">Infrastructure</h2>
+        <ul class="text-sm space-y-2 italic">
+          <li>Azure PostgreSQL</li>
+          <li>Synchronous Playwright</li>
+          <li>BeautifulSoup4 / Python</li>
+        </ul>
+      </div>
+      <div class="md:col-span-2">
+        <h2 class="text-[10px] text-white/30 tracking-widest uppercase mb-4">Methodology</h2>
+        <p class="text-sm text-white/70 leading-relaxed">
+          Extraction of cultural metadata through the analysis of Naver's ecosystem. The system normalizes Hangul characters and detects interest peaks in archival brands, enabling data-driven market validation based on real-time Seoul trends.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @keyframes scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(400%); } }
+  .animate-scan { animation: scan 3s linear infinite; }
+</style>

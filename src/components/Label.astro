@@ -1,0 +1,25 @@
+---
+interface Props {
+	emitter: string;
+	title: string;
+	date: string;
+	id?: string;
+}
+
+const { emitter, title, date, id } = Astro.props;
+---
+
+<div class="border border-black p-4 inline-block font-mono text-[10px] uppercase tracking-tighter bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-crosshair mb-4 mr-4">
+	<div class="border-b border-black pb-1 mb-1 flex justify-between">
+		<span>Auth. Certificate</span>
+		<span>{date}</span>
+	</div>
+	<p class="font-bold text-sm leading-tight mb-2">{title}</p>
+	<div class="flex justify-between items-end">
+		<div>
+			<p class="opacity-60">Issued by:</p>
+			<p>{emitter}</p>
+		</div>
+		{id && <p class="text-[8px] opacity-40">ID: {id}</p>}
+	</div>
+</div>

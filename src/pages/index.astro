@@ -72,9 +72,9 @@ const content = {
             </div>
             
             <div class="mb-12">
-                <h1 class="text-[20vw] md:text-[16vw] font-black leading-[0.75] uppercase tracking-tighter -ml-2">
+                <h1 class="text-[18vw] sm:text-[16vw] font-black leading-[0.8] uppercase tracking-tighter -ml-1 md:-ml-2">
                     M<span class="relative">O<span class="absolute -top-[0.2em] left-1/2 -translate-x-1/2 text-[0.4em]">..</span></span>P<br/>
-                    <span class="text-transparent hover:text-black transition-all duration-500 text-outline" style="-webkit-text-stroke: 2px black;">
+                    <span class="text-transparent text-outline" style="-webkit-text-stroke: 1.5px black;">
                        ARCHIVE
                     </span>
                 </h1>
@@ -99,11 +99,12 @@ const content = {
         </header>
 
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-32">
-            <div class="lg:col-span-4 relative">
-                <div class="bg-white border border-black p-8 rotate-[-2deg] shadow-2xl relative max-w-sm mx-auto z-20">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-10 bg-zinc-400/20 backdrop-blur-sm border border-black/5 rotate-1"></div>
+            <div class="lg:col-span-4 relative pt-10"> <div class="bg-white border border-black p-8 rotate-[-2deg] shadow-2xl relative max-w-sm mx-auto z-20">
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-10 bg-zinc-400/20 backdrop-blur-sm border border-black/5 rotate-1 z-30"></div>
                     <p class="font-mono text-[10px] text-zinc-400 mb-6 tracking-widest uppercase">Abstract_01.txt</p>
-                    <h2 id="abstract-title" class="text-5xl font-bold uppercase leading-none mb-6 italic underline decoration-1 underline-offset-8">{content.es.abstractTitle}</h2>
+                    <h2 id="abstract-title" class="text-4xl md:text-5xl font-bold uppercase leading-[0.9] mb-6 italic border-b border-black/40 pb-2">
+					    {content.es.abstractTitle}
+					</h2>	
                     <p id="abstract-text" class="text-sm leading-tight font-medium">{content.es.abstractText}</p>
                     <div class="mt-10 font-mono text-[10px] flex justify-between items-center opacity-40">
                         <span>(SCROLL_TO_DISCOVER)</span>
@@ -147,26 +148,26 @@ const content = {
             </div>
         </section>
 
-		<section class="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-0 border-4 border-black overflow-hidden bg-white shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
-            <div class="lg:col-span-4 p-10 border-b lg:border-b-0 lg:border-r-4 border-black hover:bg-[#FF3E00] hover:text-white transition-all group">
+		<section class="mt-20 md:mt-32 grid grid-cols-1 lg:grid-cols-12 gap-0 border-4 border-black overflow-hidden bg-white shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
+            <div class="lg:col-span-4 p-8 md:p-10 border-b lg:border-b-0 lg:border-r-4 border-black hover:bg-[#FF3E00] hover:text-white transition-all group">
                 <span class="font-mono text-[10px] mb-6 block opacity-50 underline uppercase tracking-widest">Specialty_01</span>
-                <h3 id="spec-t1" class="text-4xl font-black uppercase mb-6 leading-none italic">{content.es.specTitle1}</h3>
+                <h3 id="spec-t1" class="text-3xl md:text-4xl font-black uppercase mb-6 leading-[0.9] italic">{content.es.specTitle1}</h3>
                 <p id="spec-d1" class="text-sm font-mono leading-tight group-hover:italic transition-all">{content.es.specDesc1}</p>
                 <div class="mt-8 font-mono text-[8px] border-t border-current pt-2 uppercase opacity-60 italic tracking-widest">Tech: Streamlit / SQL / Tableau</div>
             </div>
 
-            <div class="lg:col-span-4 p-10 border-b lg:border-b-0 lg:border-r-4 border-black hover:bg-black hover:text-white transition-all group">
+            <div class="lg:col-span-4 p-8 md:p-10 border-b lg:border-b-0 lg:border-r-4 border-black hover:bg-black hover:text-white transition-all group">
                 <span class="font-mono text-[10px] mb-6 block opacity-50 underline uppercase tracking-widest">Specialty_02</span>
-                <h3 id="spec-t2" class="text-4xl font-black uppercase mb-6 leading-none italic">{content.es.specTitle2}</h3>
+                <h3 id="spec-t2" class="text-3xl md:text-4xl font-black uppercase mb-6 leading-[0.9] italic">{content.es.specTitle2}</h3>
                 <p id="spec-d2" class="text-sm font-mono leading-tight group-hover:italic transition-all">{content.es.specDesc2}</p>
                 <div class="mt-8 font-mono text-[8px] border-t border-current pt-2 uppercase opacity-60 italic tracking-widest">Tech: Playwright / Python / Azure</div>
             </div>
 
-            <div class="lg:col-span-4 p-10 hover:bg-yellow-300 transition-all group text-black">
+            <div class="lg:col-span-4 p-8 md:p-10 border-b lg:border-b-0 lg:border-r-4 border-black hover:bg-black hover:text-white transition-all group">
                 <span class="font-mono text-[10px] mb-6 block opacity-50 underline uppercase tracking-widest">Specialty_03</span>
-                <h3 id="spec-t3" class="text-4xl font-black uppercase mb-6 leading-none italic">{content.es.specTitle3}</h3>
+                <h3 id="spec-t3" class="text-3xl md:text-4xl font-black uppercase mb-6 leading-[0.9] italic">{content.es.specTitle3}</h3>
                 <p id="spec-d3" class="text-sm font-mono leading-tight group-hover:italic transition-all">{content.es.specDesc3}</p>
-            <div class="mt-8 font-mono text-[8px] border-t border-current pt-2 uppercase opacity-60 italic tracking-widest">Tech: Astro / React / Tailwind</div>
+                <div class="mt-8 font-mono text-[8px] border-t border-current pt-2 uppercase opacity-60 italic tracking-widest">Tech: Astro / React / Tailwind</div>
             </div>
         </section>
 
@@ -196,8 +197,9 @@ const content = {
 
         <section class="mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 border-t-4 border-black pt-16 mb-20">
             <div class="lg:col-span-8">
-                <div class="flex items-baseline gap-4 mb-10">
-                    <h3 id="validation-title" class="text-7xl font-black uppercase tracking-tighter italic">{content.es.validation}</h3>
+                <div class="flex items-baseline gap-4 mb-10 flex-wrap"> <h3 id="validation-title" class="text-5xl md:text-7xl font-black uppercase tracking-tighter italic leading-none">
+				        {content.es.validation}
+					</h3>
                     <span class="font-mono text-xs opacity-40">[LIST_01]</span>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

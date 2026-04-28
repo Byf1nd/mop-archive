@@ -1,24 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const projects = [
-    { id: 1, title: "E-COMMERCE HUB", tech: "Python / Streamlit", impact: "Dashboard interactivo para retail de lujo.", details: "Generación de datos sintéticos para modelado de fricción operativa en reembolsos." },
-    { id: 2, title: "IA DIABETES", tech: "Random Forest / ML", impact: "Modelo preventivo con ROC-AUC de 0.71.", details: "Clasificación fenotípica basada en ENSANUT para tamizaje preventivo." },
-    { id: 3, title: "K-TREND ANALYZER", tech: "Azure / Playwright", impact: "ETL Pipeline para tendencias en Seúl.", details: "Sincronización masiva de datos culturales (+1M registros) en Azure." }
-];
+const projectsData = {
+    es: [
+        { id: 1, title: "E-COMMERCE HUB", tech: "Python / Streamlit", impact: "Dashboard interactivo para retail de lujo.", details: "Generación de datos sintéticos para modelado de fricción operativa en reembolsos." },
+        { id: 2, title: "IA DIABETES", tech: "Random Forest / ML", impact: "Modelo preventivo con ROC-AUC de 0.71.", details: "Clasificación fenotípica basada en ENSANUT para tamizaje preventivo." },
+        { id: 3, title: "K-TREND ANALYZER", tech: "Azure / Playwright", impact: "ETL Pipeline para tendencias en Seúl.", details: "Sincronización masiva de datos culturales (+1M registros) en Azure." },
+        { id: 4, title: "KODO_STORE", tech: "Next.js / Shopify", impact: "E-commerce de diseño de autor.", details: "Arquitectura frontend enfocada en conversión y UX minimalista." }
+    ],
+    en: [
+        { id: 1, title: "E-COMMERCE HUB", tech: "Python / Streamlit", impact: "Interactive dashboard for luxury retail.", details: "Synthetic data generation for operational friction modeling." },
+        { id: 2, title: "DIABETES AI", tech: "Random Forest / ML", impact: "Preventive model with 0.71 ROC-AUC.", details: "Phenotypic classification based on ENSANUT." },
+        { id: 3, title: "K-TREND ANALYZER", tech: "Azure / Playwright", impact: "ETL Pipeline for Seoul trends.", details: "Massive synchronization of +1M cultural records." },
+        { id: 4, title: "KODO_STORE", tech: "Next.js / Shopify", impact: "Auteur design e-commerce.", details: "Frontend architecture focused on conversion and minimalist UX." }
+    ],
+};
 
 export default function ProjectStack() {
+    const [lang, setLang] = useState('es');
     const [selectedId, setSelectedId] = useState(null);
     const [isDragging, setIsDragging] = useState(false);
 
+    useEffect(() => {
+        const handleLang = (e) => setLang(e.detail);
+        window.addEventListener('langChange', handleLang);
+        return () => window.removeEventListener('langChange', handleLang);
+    }, []);
+
+    const projects = projectsData[lang];
+
     const handleTap = (id) => {
-        if (!isDragging) {
-            setSelectedId(id);
-        }
+        if (!isDragging) setSelectedId(id);
     };
 
     return (
-        <div className="relative h-[400px] md:h-[500px] w-full max-w-[95vw] md:max-w-full flex items-center justify-center mx-auto overflow-visible">
+        <div className="relative h-[450px] md:h-[500px] w-full flex items-center justify-center">
+            <div className="absolute -top-16 left-1/2 -translate-x-1/2 font-mono text-[10px] opacity-40 animate-pulse pointer-events-none uppercase tracking-[0.2em] text-center w-full">
+                {lang === 'es' ? '← Arrastra las evidencias para explorar →' : '← Drag evidence to explore →'}
+            </div>
+
             {projects.map((project, index) => (
                 <motion.div
                     key={project.id}
@@ -34,17 +54,17 @@ export default function ProjectStack() {
                         }
                     }}
                     onTap={() => handleTap(project.id)}
-                    className="absolute w-52 h-72 md:w-64 md:h-80 border-2 border-black p-4 flex flex-col justify-between shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-white cursor-grab active:cursor-grabbing overflow-hidden"
+                    className="absolute w-52 h-72 md:w-64 md:h-80 border-2 border-black p-4 flex flex-col justify-between shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-white cursor-grab active:cursor-grabbing overflow-hidden"
                     style={{
-                        rotate: typeof window !== 'undefined' && window.innerWidth < 768 ? index * 3 - 3 : index * 5 - 5,
+                        rotate: index * 4 - 6,
                         zIndex: index
                     }}
-                    whileHover={{ scale: 1.05, zIndex: 50, transition: { duration: 0.2 } }}
+                    whileHover={{ scale: 1.05, zIndex: 50 }}
                 >
-                    <div className="font-mono text-[9px] border-b border-black pb-1 uppercase italic tracking-tighter">MÖP_FILE_{project.id}</div>
-                    <div className="flex-1 my-3 bg-zinc-100 border border-black flex items-center justify-center italic text-[8px] md:text-[10px] opacity-30">PREVIEW_MODE</div>
-                    <h3 className="text-lg md:text-xl font-black uppercase leading-tight tracking-tighter">{project.title}</h3>
-                    <div className="font-mono text-[8px] md:text-[9px] bg-black text-white px-2 py-1 self-start mt-2 uppercase">{project.tech}</div>
+                    <div className="font-mono text-[9px] border-b border-black pb-1 uppercase italic">MÖP_FILE_{project.id}</div>
+                    <div className="flex-1 my-4 bg-zinc-100 border border-black flex items-center justify-center italic text-[10px] opacity-30 select-none">PREVIEW_MODE</div>
+                    <h3 className="text-xl font-black uppercase leading-tight">{project.title}</h3>
+                    <div className="font-mono text-[9px] bg-black text-white px-2 py-1 self-start mt-2">{project.tech}</div>
                 </motion.div>
             ))}
 

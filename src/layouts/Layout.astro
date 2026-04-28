@@ -7,7 +7,8 @@ const { title } = Astro.props;
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="color-scheme" content="light">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=1" />
 		
 		<title>{title || "MÖP ARCHIVE | Paula Mendez Ortega"}</title>
@@ -19,6 +20,34 @@ const { title } = Astro.props;
 		<meta property="og:type" content="website" />
 		
 		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+		<style is:global>
+			:root {
+				color-scheme: light;
+				--bg-color: #F5F5F3;
+			}
+
+			html, body {
+				background-color: var(--bg-color) !important;
+				color: black !important;
+				margin: 0;
+				padding: 0;
+				/* Mejora la renderización de fuentes en iOS/macOS */
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			html {
+				-webkit-text-size-adjust: 100%;
+			}
+
+			/* Fix preventivo para que nada se salga de la pantalla */
+			body {
+				overflow-x: hidden;
+				width: 100%;
+				position: relative;
+			}
+		</style>
 	</head>
 	<body class="bg-[#F5F5F3] selection:bg-[#FF3E00] selection:text-white antialiased">
 		<slot />

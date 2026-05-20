@@ -7,7 +7,7 @@ import ServiceTicket from '../components/ServiceTicket.jsx';
 
 const content = {
   es: {
-	specTitle1: "Inteligencia de Negocios",
+    specTitle1: "Inteligencia de Negocios",
     specDesc1: "Arquitectura de datos para retail. Reducción de fricción operativa mediante dashboards de toma de decisiones en tiempo real.",
     specTitle2: "Automatización & Bots",
     specDesc2: "Sincronización masiva (+1.1M registros). Scrapers serverless y bots de alertas integrados en Telegram/Azure.",
@@ -29,10 +29,25 @@ const content = {
     h3_val: "+1.1M Records",
     h4: "Automatización Fashion",
     h4_val: "100% Serverless",
-    statement: '"Mi enfoque no es solo el código, sino la reducción de fricción operativa y la predicción de comportamientos mediante inteligencia cultural."'
+    statement: '"Mi enfoque no es solo el código, sino la reducción de fricción operativa y la predicción de comportamientos mediante inteligencia cultural."',
+    
+    // Traducciones de la nueva sección para humanos
+    manifestTitle: "Traducción Humana",
+    manifestSub: "Enfoque: Reducción de Fricción Financiera",
+    manifestP1: "La mayoría de los negocios operan a ciegas: compran inventario basándose en la intuición y analizan las pérdidas cuando ya es demasiado tarde.",
+    manifestHighlight: '"Yo diseño sistemas que miran el futuro. Traduzco variables abstractas (como el clima o el comportamiento del consumidor) en decisiones de dinero exactas: cuánto stock comprar, cuánto vas a ganar y cómo evitar mermas antes de abrir la puerta."',
+    vantageTag: "Caso de Éxito // Arquitectura Predictiva",
+    vantageTitle: "Sistema de Control Predictivo (Vantage)",
+    vantageSub: "Cómo evito que un micro-retailer (ej. una cafetería) pierda dinero en stock.",
+    c1Title: "El Recetario Inteligente",
+    c1Desc: "Cada transacción descuenta inventario real automáticamente. Si vendes un Matcha Latte, el sistema sabe que perdiste 250ml de leche y 5g de matcha sin tocar un Excel.",
+    c2Title: "Predicción por Entorno",
+    c2Desc: "Un algoritmo que aprende patrones no lineales: si los sábados llueve, la demanda de pan cae 25% pero el café americano se dispara. Sabes qué comprar antes de abrir.",
+    c3Title: "El Centinela Financiero",
+    c3Desc: "Convierte mililitros predichos a pesos ($ MXN). Calcula el margen bruto proyectado del día y dispara alertas rojas si hay riesgo de desabasto o merma inminente."
   },
   en: {
-	specTitle1: "Business Intelligence",
+    specTitle1: "Business Intelligence",
     specDesc1: "Data architecture for retail. Reducing operational friction through real-time decision-making dashboards.",
     specTitle2: "Automation & Bots",
     specDesc2: "Massive synchronization (+1.1M records). Serverless scrapers and alert bots integrated into Telegram/Azure.",
@@ -54,7 +69,22 @@ const content = {
     h3_val: "+1.1M Records",
     h4: "Fashion Automation",
     h4_val: "100% Serverless",
-    statement: '"My focus is not just code, but reducing operational friction and predicting behaviors through cultural intelligence."'
+    statement: '"My focus is not just code, but reducing operational friction and predicting behaviors through cultural intelligence."',
+    
+    // New section translations
+    manifestTitle: "Human Translation",
+    manifestSub: "Focus: Financial Friction Reduction",
+    manifestP1: "Most businesses operate blindly: they buy inventory based on intuition and analyze losses when it's already too late.",
+    manifestHighlight: '"I build systems that look into the future. I translate abstract variables (like weather or consumer behavior) into exact cash-flow decisions: how much stock to buy, expected margins, and how to eliminate waste before opening."',
+    vantageTag: "Success Case // Predictive Architecture",
+    vantageTitle: "Predictive Control System (Vantage)",
+    vantageSub: "How I prevent a micro-retailer (e.g., a coffee shop) from losing money on stock.",
+    c1Title: "Intelligent Recipe Mapping",
+    c1Desc: "Every transaction instantly deducts raw inventory. Sell a Matcha Latte, and the system knows you used 250ml of milk and 5g of matcha without any Excel sheets.",
+    c2Title: "Environmental Forecasting",
+    c2Desc: "An AI algorithm that learns non-linear patterns: if it rains on Saturdays, pastry demand drops by 25% but hot coffee spikes. Know what you need before opening.",
+    c3Title: "The Financial Sentinel",
+    c3Desc: "Converts predicted milliliters into real cash ($). Projects the day's gross margin and triggers red flags if there's an imminent stockout or waste risk."
   }
 };
 ---
@@ -63,20 +93,20 @@ const content = {
     <div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[100] noise-bg"></div>
 
     <main class="p-4 md:p-10 relative max-w-[1600px] mx-auto overflow-x-hidden">
-	   <nav class="flex justify-between items-start mb-8 relative z-[110]">
-	       <div id="status-tag" class="bg-yellow-300 border-2 border-black p-2 font-mono text-[10px] font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase">
-		       {content.es.status}
-			</div>
+       <nav class="flex justify-between items-start mb-8 relative z-[110]">
+           <div id="status-tag" class="bg-yellow-300 border-2 border-black p-2 font-mono text-[10px] font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase">
+               {content.es.status}
+            </div>
 
-			<button id="lang-btn" class="bg-black text-white px-3 py-1 cursor-pointer hover:bg-[#FF3E00] transition-colors font-mono text-[10px] font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-			    EN / ES
-			</button>
-		</nav>
+            <button id="lang-btn" class="bg-black text-white px-3 py-1 cursor-pointer hover:bg-[#FF3E00] transition-colors font-mono text-[10px] font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                EN / ES
+            </button>
+        </nav>
         
         <header class="border-b-4 border-black pb-8 mb-16 relative">
             <div class="mb-12">
-                <h1 class="text-[18vw] md:text-[16vw] font-black leading-[0.85] uppercase tracking-tighter -ml-1 overflow-visible">
-                    <span class="block">M<span class="relative inline-block">O<span class="absolute -top-[0.2em] left-1/2 -translate-x-1/2 text-[0.4em] leading-none">..</span></span>P</span>
+                <h1 class="text-[17vw] md:text-[16vw] font-black leading-none uppercase tracking-tighter -ml-1 py-2 overflow-visible select-none">
+                    <span class="block">MÖP</span>
                     <span class="text-transparent block" style="-webkit-text-stroke: 1.5px black; text-stroke: 1.5px black; font-family: sans-serif;">
                        ARCHIVE
                     </span>
@@ -99,12 +129,13 @@ const content = {
         </header>
 
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-32">
-            <div class="lg:col-span-4 relative pt-10"> <div class="bg-white border border-black p-8 rotate-[-2deg] shadow-2xl relative max-w-sm mx-auto z-20">
-                <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-10 bg-zinc-400/20 backdrop-blur-sm border border-black/5 rotate-1 z-30"></div>
+            <div class="lg:col-span-4 relative pt-10"> 
+                <div class="bg-white border border-black p-8 rotate-[-2deg] shadow-2xl relative max-w-sm mx-auto z-20">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-10 bg-zinc-400/20 backdrop-blur-sm border border-black/5 rotate-1 z-30"></div>
                     <p class="font-mono text-[10px] text-zinc-400 mb-6 tracking-widest uppercase">Abstract_01.txt</p>
                     <h2 id="abstract-title" class="text-4xl md:text-5xl font-bold uppercase leading-[0.9] mb-6 italic border-b border-black/40 pb-2">
-					    {content.es.abstractTitle}
-					</h2>	
+                        {content.es.abstractTitle}
+                    </h2>   
                     <p id="abstract-text" class="text-sm leading-tight font-medium">{content.es.abstractText}</p>
                     <div class="mt-10 font-mono text-[10px] flex justify-between items-center opacity-40">
                         <span>(SCROLL_TO_DISCOVER)</span>
@@ -148,7 +179,78 @@ const content = {
             </div>
         </section>
 
-		<section class="mt-20 md:mt-32 grid grid-cols-1 lg:grid-cols-12 gap-0 border-4 border-black overflow-hidden bg-white shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
+        <section class="mt-32 border-4 border-black bg-white p-6 md:p-12 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] mb-32">
+            <div class="border-b-2 border-black pb-6 mb-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">[ CAPABILITY_MANIFEST_02 ]</span>
+                    <h2 id="manifest-title" class="text-4xl font-black uppercase tracking-tighter italic mt-1">{content.es.manifestTitle}</h2>
+                </div>
+                <div id="manifest-sub" class="font-mono text-xs bg-zinc-100 border border-black px-3 py-1 uppercase italic">
+                    {content.es.manifestSub}
+                </div>
+            </div>
+
+            <div class="max-w-3xl font-mono text-sm md:text-base leading-relaxed mb-12">
+                <p id="manifest-p1" class="mb-4 text-zinc-600">{content.es.manifestP1}</p>
+                <p id="manifest-highlight" class="font-bold border-l-4 border-[#FF3E00] pl-4 italic text-zinc-900 text-lg md:text-xl">{content.es.manifestHighlight}</p>
+            </div>
+
+            <div class="bg-[#F5F5F3] border-2 border-black p-6 md:p-10 relative overflow-hidden">
+                <div id="vantage-tag" class="absolute top-0 right-0 bg-black text-white px-4 py-1 font-mono text-[9px] uppercase tracking-widest">{content.es.vantageTag}</div>
+                
+                <h3 id="vantage-title" class="text-2xl font-black uppercase mb-1 tracking-tight mt-4 md:mt-0">{content.es.vantageTitle}</h3>
+                <p id="vantage-sub" class="font-mono text-xs opacity-60 mb-8">{content.es.vantageSub}</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-xs font-bold text-[#FF3E00]">01 / LAYER_DATA</span>
+                            <h4 id="c1-title" class="text-lg font-black uppercase my-2">{content.es.c1Title}</h4>
+                            <p id="c1-desc" class="text-xs font-mono leading-tight opacity-80">{content.es.c1Desc}</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-xs font-bold text-black">02 / LAYER_PREDICT</span>
+                            <h4 id="c2-title" class="text-lg font-black uppercase my-2">{content.es.c2Title}</h4>
+                            <p id="c2-desc" class="text-xs font-mono leading-tight opacity-80">{content.es.c2Desc}</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-xs font-bold text-yellow-600">03 / LAYER_UX_VALUE</span>
+                            <h4 id="c3-title" class="text-lg font-black uppercase my-2">{content.es.c3Title}</h4>
+                            <p id="c3-desc" class="text-xs font-mono leading-tight opacity-80">{content.es.c3Desc}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-2 border-black bg-white p-4 md:p-8">
+                    <span class="font-mono text-[9px] opacity-40 block mb-4 uppercase tracking-widest">[ REVENUE_LOGIC_FLOW.PNG ]</span>
+                    
+                    <div class="flex flex-col md:flex-row items-center justify-around gap-6 text-center font-mono text-xs py-4">
+                        <div class="p-4 border border-dashed border-black/30 bg-zinc-50 w-full md:w-1/4">
+                            <span class="font-bold block text-[#FF3E00]">INPUT VARIABLES</span>
+                            <p class="text-[11px] mt-1 text-zinc-600">Día de la semana<br>+ Historial Climático</p>
+                        </div>
+                        <div class="text-xl hidden md:block">➔</div>
+                        <div class="p-4 border-2 border-black bg-zinc-900 text-white w-full md:w-1/3 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)]">
+                            <span class="font-bold block text-yellow-300">CORE PROCESSING (IA)</span>
+                            <p class="text-[11px] mt-1 opacity-80">Random Forest Regressor predice demanda base ➔ Algoritmo descuenta inventario por mililitros y gramos exactos.</p>
+                        </div>
+                        <div class="text-xl hidden md:block">➔</div>
+                        <div class="p-4 border border-dashed border-black/30 bg-zinc-50 w-full md:w-1/4">
+                            <span class="font-bold block text-green-600">FINANCIAL OUTPUT</span>
+                            <p class="text-[11px] mt-1 text-zinc-600">Márgenes Brutos en $ + Alerta de Mermas y Orden de Compra Automática</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-20 md:mt-32 grid grid-cols-1 lg:grid-cols-12 gap-0 border-4 border-black overflow-hidden bg-white shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
             <div class="lg:col-span-4 p-8 md:p-10 border-b lg:border-b-0 lg:border-r-4 border-black hover:bg-[#FF3E00] hover:text-white transition-all group cursor-pointer">
                 <span class="font-mono text-[10px] mb-6 block opacity-50 underline uppercase tracking-widest">Specialty_01</span>
                 <h3 id="spec-t1" class="text-3xl md:text-4xl font-black uppercase mb-6 leading-[0.9] italic">
@@ -215,9 +317,10 @@ const content = {
 
         <section class="mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 border-t-4 border-black pt-16 mb-20">
             <div class="lg:col-span-8">
-                <div class="flex items-baseline gap-4 mb-10 flex-wrap"> <h3 id="validation-title" class="text-5xl md:text-7xl font-black uppercase tracking-tighter italic leading-none">
-				        {content.es.validation}
-					</h3>
+                <div class="flex items-baseline gap-4 mb-10 flex-wrap"> 
+                    <h3 id="validation-title" class="text-5xl md:text-7xl font-black uppercase tracking-tighter italic leading-none">
+                        {content.es.validation}
+                    </h3>
                     <span class="font-mono text-xs opacity-40">[LIST_01]</span>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -243,40 +346,39 @@ const content = {
             </div>
         </section>
 
-
-		<footer class="mt-40 border-t-4 border-black pt-10 pb-20 flex flex-col md:flex-row justify-between items-start gap-10 font-mono text-[10px] uppercase">
+        <footer class="mt-40 border-t-4 border-black pt-10 pb-20 flex flex-col md:flex-row justify-between items-start gap-10 font-mono text-[10px] uppercase">
             <div class="space-y-2">
                 <p class="font-bold text-base tracking-tighter">MÖP_ARCHIVE_2026</p>
                 <p class="opacity-50">All rights reserved // Issue 01</p>
-				<div class="pt-4">
-				    <span class="bg-black text-white px-2 py-1">BUILD_0.9.4_STABLE</span>
+                <div class="pt-4">
+                    <span class="bg-black text-white px-2 py-1">BUILD_0.9.4_STABLE</span>
                 </div>
-			</div>
+            </div>
     
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 w-full md:w-auto">
                 <div class="flex flex-col">
                     <span class="opacity-40 mb-3 underline text-[8px] tracking-[0.2em]">Direct_Inquiry</span>
                     <a href="mailto:paula@moparchive.com" class="hover:text-[#FF3E00] transition-colors font-bold text-xs lowercase">
-					    paula@moparchive.com
-					</a>
+                        paula@moparchive.com
+                    </a>
                 </div>
 
                 <div class="flex flex-col">
                     <span class="opacity-40 mb-3 underline text-[8px] tracking-[0.2em]">Social_Nodes</span>
                     <div class="flex flex-col gap-2">
-					    <a href="https://www.instagram.com/kroma_code?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:underline flex items-center gap-1">
+                        <a href="https://www.instagram.com/kroma_code?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:underline flex items-center gap-1">
                             <span class="w-2 h-2 bg-pink-500 rounded-full"></span> Instagram
                         </a>
                         <a href="https://www.linkedin.com/in/paula-mendez-ortega/" target="_blank" class="hover:underline flex items-center gap-1">
-						    <span class="w-2 h-2 bg-blue-600 rounded-full"></span> LinkedIn
+                            <span class="w-2 h-2 bg-blue-600 rounded-full"></span> LinkedIn
                         </a>
                         <a href="https://github.com/Byf1nd" target="_blank" class="hover:underline flex items-center gap-1">
                             <span class="w-2 h-2 bg-zinc-800 rounded-full"></span> GitHub
                         </a>
-					</div>
+                    </div>
                 </div>
 
-				<div class="flex flex-col">
+                <div class="flex flex-col">
                     <span class="opacity-40 mb-3 underline text-[8px] tracking-[0.2em]">Location</span>
                     <p class="font-bold italic">Mérida, MX // Remote_Global</p>
                 </div>
@@ -307,13 +409,28 @@ const content = {
         h2: document.getElementById('h2'),
         h3: document.getElementById('h3'),
         h4: document.getElementById('h4'),
-        statement: document.getElementById('statement'), // <- Coma aquí
+        statement: document.getElementById('statement'),
         specTitle1: document.getElementById('spec-t1'),
         specDesc1: document.getElementById('spec-d1'),
         specTitle2: document.getElementById('spec-t2'),
         specDesc2: document.getElementById('spec-d2'),
         specTitle3: document.getElementById('spec-t3'),
-        specDesc3: document.getElementById('spec-d3')
+        specDesc3: document.getElementById('spec-d3'),
+        
+        // IDs de la nueva sección humana
+        manifestTitle: document.getElementById('manifest-title'),
+        manifestSub: document.getElementById('manifest-sub'),
+        manifestP1: document.getElementById('manifest-p1'),
+        manifestHighlight: document.getElementById('manifest-highlight'),
+        vantageTag: document.getElementById('vantage-tag'),
+        vantageTitle: document.getElementById('vantage-title'),
+        vantageSub: document.getElementById('vantage-sub'),
+        c1Title: document.getElementById('c1-title'),
+        c1Desc: document.getElementById('c1-desc'),
+        c2Title: document.getElementById('c2-title'),
+        c2Desc: document.getElementById('c2-desc'),
+        c3Title: document.getElementById('c3-title'),
+        c3Desc: document.getElementById('c3-desc')
     };
 
     btn.addEventListener('click', () => {
@@ -324,11 +441,10 @@ const content = {
                 elements[key].innerText = content[currentLang][key];
             }
         });
-		
-		btn.innerText = currentLang === 'es' ? 'EN / ES' : 'ES / EN';
-		window.dispatchEvent(new CustomEvent('langChange', { detail: currentLang }));
-	});
-		
+        
+        btn.innerText = currentLang === 'es' ? 'EN / ES' : 'ES / EN';
+        window.dispatchEvent(new CustomEvent('langChange', { detail: currentLang }));
+    });
 </script>
 
 <style>
